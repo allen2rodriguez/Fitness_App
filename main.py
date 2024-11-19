@@ -2,16 +2,17 @@ import customtkinter as ctk
 from tkinter import messagebox
 from timer import start_timer, update_timer, stop_timer
 from leaderboard import save_workout
+from signin_page import SignInPage
 
 ctk.set_appearance_mode("dark")
 
-name = "Allen"
+name = "Joe Schmo"
 
 class App(ctk.CTk):
     def __init__(app):
         super().__init__()
 
-        app.geometry("370x675")
+        app.geometry("370x670")
         app.title("ASU Fitness App")
 
         # Create a container frame to stack the pages
@@ -115,12 +116,12 @@ class HomePage(ctk.CTkFrame):
         text_2 = ctk.CTkTextbox(app, width=350, height=125, font=("Arial", 18))
         text_2.pack(pady=10, padx=10)
         text_2.insert("end", "Strong A 5x5:  \n\n")
-        text_2.insert("end", "Squat               5x5\nBench Press   5x5\nBarbell Row    5x5")
+        text_2.insert("end", "Squat              5x5\nBench Press   5x5\nBarbell Row    5x5")
 
         text_3 = ctk.CTkTextbox(app, width=350, height=150, font=("Arial", 18))
         text_3.pack(pady=10, padx=10)
         text_3.insert("end", "Leg Day:  \n\n")
-        text_3.insert("end", "Power Clean         5x2\nSquat                    5x5\nFront Squat          1x5\nRDLs                    3x8")
+        text_3.insert("end", "Power Clean        3x2\nSquat                   3x5\nFront Squat          3x8\nRDLs                    3x12")
 
     def update_timer(app):
         update_timer(app)  # Call the imported update_timer function
@@ -195,5 +196,6 @@ class HistoryPage(ctk.CTkFrame):
 
 # Run the application
 if __name__ == "__main__":
+    sign_in_page = SignInPage()
     app = App()
     app.mainloop()
