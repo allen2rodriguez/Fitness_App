@@ -1,5 +1,3 @@
-import customtkinter as ctk
-
 def save_workout(name, self):
     """Save user information to a file after the workout is completed."""
     total_time = self.time_elapsed  # Time elapsed in seconds
@@ -9,5 +7,5 @@ def save_workout(name, self):
     
     # Save the data to a file
     with open("workout_log.txt", "a") as file:
-        file.write(f"6. {name}    Time: {formatted_time}\n")
+        file.write(f"6. {name}             Time: {formatted_time}\n")
 

@@ -7,7 +7,6 @@ ctk.set_appearance_mode("dark")
 
 name = "Allen"
 
-
 class App(ctk.CTk):
     def __init__(app):
         super().__init__()
@@ -153,6 +152,18 @@ class LeadboardPage(ctk.CTkFrame):
         self.text_1 = ctk.CTkTextbox(self, width=350, height=200, font=("Arial", 18))
         self.text_1.pack(pady=10, padx=10)
 
+        text_4 = ctk.CTkTextbox(self, width=350, height=75, font=("Arial", 18))
+        text_4.pack(pady=10, padx=10)
+        text_4.insert("0.0", "Total Calories:")
+
+        text_5 = ctk.CTkTextbox(self, width=350, height=75, font=("Arial", 18))
+        text_5.pack(pady=10, padx=10)
+        text_5.insert("0.0", "Classes Attended:")
+
+        text_6 = ctk.CTkTextbox(self, width=350, height=75, font=("Arial", 18))
+        text_6.pack(pady=10, padx=10)
+        text_6.insert("0.0", "Stairs Climbed:")
+
         self.refresh()
 
     def refresh(self):
@@ -172,7 +183,6 @@ class LeadboardPage(ctk.CTkFrame):
         except FileNotFoundError:
             self.text_1.insert("end", "Workout log file not found.")
 
-
 class HistoryPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
         super().__init__(parent)
@@ -180,6 +190,8 @@ class HistoryPage(ctk.CTkFrame):
         label = ctk.CTkLabel(self, text="History", font=("Arial", 24))
         label.pack(pady=20)
 
+        label1 = ctk.CTkLabel(self, text="No Previous Workouts\n Start a new workout to show up", font=("Arial", 16))
+        label1.pack(pady=10, padx=10)
 
 # Run the application
 if __name__ == "__main__":
