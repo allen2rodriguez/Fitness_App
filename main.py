@@ -152,6 +152,13 @@ class LeadboardPage(ctk.CTkFrame):
 
         self.text_1 = ctk.CTkTextbox(self, width=350, height=200, font=("Arial", 18))
         self.text_1.pack(pady=10, padx=10)
+        self.text_1.insert("0.0", "Total Hours:  \n\n")
+
+        self.text_1.insert("end", "1. Hugh Mongus      Time: 4:52:12\n")
+        self.text_1.insert("end", "2. Bozo                    Time: 2:12:02\n")
+        self.text_1.insert("end", "3. Joe King              Time: 1:12:25\n")
+        self.text_1.insert("end", "4. Bhris Da Jit          Time: 2:01:07\n")
+        self.text_1.insert("end", "5. Chris P. Bacon    Time: 1:58:25\n")
 
         text_4 = ctk.CTkTextbox(self, width=350, height=75, font=("Arial", 18))
         text_4.pack(pady=10, padx=10)
